@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,15 +13,52 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="YDr-T5-LXJ">
+                                <rect key="frame" x="76" y="321" width="240" height="61.333333333333314"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="cloud.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ASN-3U-8Xp">
+                                <rect key="frame" x="119" y="91.666666666666657" width="154" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="u3G-SI-BfU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="AlamofireLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="MDC-M2-GKN">
+                                <rect key="frame" x="0.0" y="520" width="392" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="evQ-zm-Ili"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="MDC-M2-GKN" firstAttribute="centerX" secondItem="YDr-T5-LXJ" secondAttribute="centerX" id="4tc-2D-jRJ"/>
+                            <constraint firstItem="MDC-M2-GKN" firstAttribute="top" secondItem="YDr-T5-LXJ" secondAttribute="bottom" constant="137.66999999999999" id="7Ub-Ld-YfY"/>
+                            <constraint firstItem="MDC-M2-GKN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HqF-pM-Edq"/>
+                            <constraint firstItem="ASN-3U-8Xp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="b9c-NE-AuF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YDr-T5-LXJ" secondAttribute="trailing" constant="77" id="bfY-qF-nhi"/>
+                            <constraint firstItem="YDr-T5-LXJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="eGU-Mt-fxh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ASN-3U-8Xp" secondAttribute="trailing" constant="120" id="eSy-X5-A2b"/>
+                            <constraint firstItem="ASN-3U-8Xp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="etz-XC-TST"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MDC-M2-GKN" secondAttribute="bottom" constant="48" id="f9i-Yh-Z31"/>
+                            <constraint firstItem="YDr-T5-LXJ" firstAttribute="top" secondItem="ASN-3U-8Xp" secondAttribute="bottom" constant="87" id="zbo-ld-wWO"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AlamofireLogo.png" width="850" height="250"/>
+        <image name="cloud.fill" catalog="system" width="128" height="87"/>
+        <image name="logo" width="143.66667175292969" height="61.333332061767578"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
