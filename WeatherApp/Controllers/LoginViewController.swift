@@ -89,7 +89,7 @@ class LoginViewController: UIViewController {
                     goToMainAppScreen()
                 }
                 else {
-                    let ac = UIAlertController(title: "Wrong password", message: "", preferredStyle: .alert)
+                    let ac = UIAlertController(title: "Wrong passgiword", message: "", preferredStyle: .alert)
                     ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
                     present(ac,animated: true)
                 }
