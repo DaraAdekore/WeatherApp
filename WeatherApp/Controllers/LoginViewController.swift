@@ -15,11 +15,8 @@ class LoginViewController: UIViewController {
     let defaults = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
-        username.attributedPlaceholder = NSAttributedString(
-            string: "Username",attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
-        password.attributedPlaceholder = NSAttributedString(
-            string: "Password",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        username.attributedPlaceholder = NSAttributedString(string: "Username",attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        password.attributedPlaceholder = NSAttributedString(string: "Password",attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
         username.font = UIFont.systemFont(ofSize: 20)
         username.textColor = .black
         username.textAlignment = .center
@@ -61,19 +58,16 @@ class LoginViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
-        // Do any additional setup after loading the view.
-        //view.backgroundColor = UIColor(patternImage: UIImage(named: "FreeVector-Cloud-Pattern")!)
         view.addSubview(username)
         view.addSubview(password)
         view.addSubview(loginButton)
         view.addSubview(logo)
         
-        
         getLoginState()
     }
     func getLoginState(){
         //Already logged in
-        if defaults.bool(forKey: "loggedIn") == true{
+        if defaults.bool(forKey: "loggedIn") == true {
             goToMainAppScreen()
         }
     }
@@ -89,7 +83,7 @@ class LoginViewController: UIViewController {
                     goToMainAppScreen()
                 }
                 else {
-                    let ac = UIAlertController(title: "Wrong passgigitword", message: "", preferredStyle: .alert)
+                    let ac = UIAlertController(title: "Wrong password", message: "", preferredStyle: .alert)
                     ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
                     present(ac,animated: true)
                 }
@@ -116,7 +110,6 @@ class LoginViewController: UIViewController {
             ac.addAction(UIAlertAction(title: "No", style: .destructive, handler: nil))
             present(ac, animated: true, completion: nil)
         }
-        
     }
     
     func register(username:String,password:String){
@@ -128,7 +121,7 @@ class LoginViewController: UIViewController {
             defaults.set([username:password], forKey: "database")
         }
     }
-    func goToMainAppScreen() {
+    func goToMainAppScreen(){
         let mainAppVC = ViewController()
         mainAppVC.modalPresentationStyle = .fullScreen
         present(mainAppVC, animated: true, completion: nil)
@@ -145,7 +138,7 @@ class LoginViewController: UIViewController {
         username.text = ""
         password.text = ""
     }
-    override func viewWillLayoutSubviews() {
+    override func viewWillLayoutSubviews(){
         
         NSLayoutConstraint.activate([
             logo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
