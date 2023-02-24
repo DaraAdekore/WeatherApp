@@ -1,5 +1,6 @@
 # Weather App
 This is a simple weather app that uses the OpenWeatherMap API to display the current weather data for a user's current location. The app is built using Swift 5 and Xcode 12 and follows iOS design guidelines for a clean and easy-to-use interface.
+
 ![AcidicCooperativeHairstreak-size_restricted](https://user-images.githubusercontent.com/18224357/221120141-f5b765a1-4495-48ef-b193-06b35681333b.gif)
 
 # Features
